@@ -41,4 +41,4 @@ Looking at the documentation on the Ultrabay, it appears that the interface in m
 
 We can get +5v power and GND from the Slimline port to power the Pi, but neither the battery interface nor the Slimline port exposes a serial connection to the Ultrabay. Maybe one could be hacked in using the battery interface, but I don't know enough about this interface to know if it could be addressed as a COM port in the operating system. There isn't a way to make the SATA port function as a COM port either, meaning we have to look elsewhere for a Tx and Rx line. 
 
-To get the device working easily then, we'll have to use an existing USB port to provide our serial interface. 
+To get the device working easily then, we'll have to use an existing USB port to provide our serial interface. An external USB Micro-B connector with the Tx and Rx pins wired into GPIO pins 8 and 10 respectively. This isn't an optimal solution, but allows us to use the existing USB ports on the machine to interface with the Pi. 
